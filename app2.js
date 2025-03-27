@@ -1,12 +1,17 @@
-const emaildata = ["abhraanil@gmail.com","nil@gmail.com",]
-const roolid = ["jn-01","jn-02","jn-03","jn-04","jn-05","jn-06","jn-07","jn-08","jn-09","jn-10",]
+const students = {
+    "abhranil@gmail.com":"jn-01",
+    "nil@gmail.com":"jn-02"
+
+}
+
+
 but.addEventListener('click', f1);
 const fname = document.getElementById('full-name');
 const emailf = document.getElementById('email');
 const butf = document.getElementById('but');
 
 function f1() {
-    if (emaildata.find((email) => email === emailf.value) && roolid.find((roll) => roll === fname.value)) {
+    if (emailf.value in students && students[emailf.value] === fname.value) {
         window.location.href = 'co.html';
     }else if (emailf.value === '') {}
     
@@ -16,4 +21,3 @@ function f1() {
 }
 
 butf.addEventListener('click', f1());
-
